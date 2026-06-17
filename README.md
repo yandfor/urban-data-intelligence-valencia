@@ -9,8 +9,11 @@ maps, dashboards, clustering and an improvement simulator.
 ##  Project structure
 
 limpieza_datos.ipynb       # Data cleaning and feature engineering pipeline
+
 app.py                     # Main Streamlit application
+
 uqi_barrios.geojson        # Master dataset (output of the notebook)
+
 uqi_barrios.csv            # Same data in tabular format
 
 ---
