@@ -103,10 +103,3 @@ pyogrio
 | Dashboard | Neighbourhood rankings and individual score breakdown |
 | Clustering | KMeans grouping of similar neighbourhoods with map and scatter plot |
 | Simulator | Adjust indicators and see the real-time impact on the UQI |
-
----
-
-## Author
-
-Built as part of a data engineering and visualisation project at **Universitat Politècnica de València (UPV)**.  
-Data period: 2016 – 2021.
