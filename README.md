@@ -55,7 +55,6 @@ Higher score always means better urban quality.
 
 - **Air quality**: only 10 measurement stations cover 88 neighbourhoods. Each neighbourhood is assigned the score of its nearest station via spatial join.
 - **Noise**: the municipal noise map covers only 24 of the 88 neighbourhoods (27%). The remaining 64 receive a neutral score of 50.
-- **Complaints**: 16 peripheral neighbourhoods have no registered complaints, receiving a neutral score via median imputation.
 - **Analysis period**: 2016–2021. Data beyond 2021 is not included as air quality records do not extend further.
 
 ---
