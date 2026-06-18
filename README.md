@@ -51,6 +51,30 @@ Higher score always means better urban quality.
 
 ---
 
+## Score details & missing data handling
+
+**Air Quality Score (25%)** — Built from PM2.5, PM10, NO2 and O3 measured across 10 monitoring stations (2016–2021). Normalised with MinMax scaling and inverted so that 100 = cleanest air. Since 10 stations cannot individually cover 88 neighbourhoods, each neighbourhood inherits the score of its nearest station via spatial join.
+
+**Complaints Score (20%)** — Based on the number of citizen complaints registered at City Hall (~90,000 records). The scale is inverted: fewer complaints = higher score. Rafalell-Vistabella, with zero registered complaints, receives a score of 100 (absence of complaints is a positive signal).
+
+**Noise Score (20%)** — Combines day, evening and night noise maps with weights 0.40 / 0.35 / 0.25. Real data only covers 24 of the 88 neighbourhoods (27%); the remaining 64 receive a neutral score of 50, flagged internally via `ruido_con_dato` for transparency.
+
+**Services Score (20%)** — Density of municipal facilities (libraries, civic centres, schools…) per neighbourhood, after discarding unclassified categories. 5 neighbourhoods with no registered facilities receive a score of 0, as this reflects real absence rather than a coverage gap.
+
+**Mobility Score (15%)** — Total Valenbisi station capacity per neighbourhood. 19 neighbourhoods without service (mostly rural hamlets) receive a score of 0.
+
+**Missing data criteria summary**
+
+| Indicator | Cause of missing data | Assigned value | Rationale |
+|---|---|---|---|
+| Complaints | No complaints registered | 100 | Absence is a positive signal |
+| Noise | No coverage in the noise map | 50 | Source limitation, not a neighbourhood trait |
+| Services | No facilities present | 0 | Real, verifiable absence |
+| Mobility | No stations present | 0 | Real, verifiable absence |
+
+The final **UQI** is the weighted sum of all five scores, scaled between 0 and 100. Current city-wide average across Valencia's 88 neighbourhoods: **43.7**.
+---
+
 ## Known limitations
 
 - **Air quality**: only 10 measurement stations cover 88 neighbourhoods. Each neighbourhood is assigned the score of its nearest station via spatial join.
