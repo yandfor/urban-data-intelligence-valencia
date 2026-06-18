@@ -86,6 +86,11 @@ COL_LABELS = {
 with st.sidebar:
     st.title("Urban Data Intelligence")
     st.caption("Valencia, 2016-2021")
+    st.info(
+        "**How to read the scores:** every indicator is normalised "
+        "from 0 to 100, where **higher is always better** "
+        "(e.g. 100 = cleanest air, quietest noise, best services)."
+    )
     st.divider()
 
     section = st.radio(
