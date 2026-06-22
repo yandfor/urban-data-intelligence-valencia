@@ -33,6 +33,20 @@ All datasets are publicly available at [opendata.vlci.valencia.es](https://opend
 | `ubicacio_estacions.geojson` | Air quality station locations and coordinates |
 
 ---
+Who is this for?
+
+**Residents** — compare neighbourhoods before moving, or understand what's driving
+quality of life issues in your area without needing to dig through raw datasets.
+
+**City council & urban planners** — identify which neighbourhoods are underserved
+across multiple dimensions simultaneously, and use the simulator to model the impact
+of potential investments before committing resources.
+
+**Researchers & students** — a reproducible, open-source pipeline combining
+geospatial joins, composite index design, and unsupervised clustering on real
+municipal data.
+
+---
 
 ## Methodology
 
